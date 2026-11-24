@@ -1,0 +1,49 @@
+{
+  "schema": "forgelm.suite-package.v1",
+  "id": "example.text-tools",
+  "publisher": "example",
+  "name": "example.text-tools",
+  "version": "1.0.0",
+  "description": "Text normalization component",
+  "license": "Apache-2.0",
+  "compatibility": {
+    "pluginHost": ">=1.0.0,<2.0.0",
+    "pluginApi": "1.0",
+    "nodeSpec": "1.0"
+  },
+  "targets": [
+    {
+      "id": "windows-x86_64-cp312-cpu",
+      "os": "windows",
+      "arch": "x86_64",
+      "python": "3.12",
+      "accelerator": "cpu",
+      "runtimeGroups": {
+        "default": {
+          "lock": "locks/windows-x86_64-cp312-cpu.json"
+        }
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "normalize",
+      "implementationVersion": "1.0.0",
+      "distribution": "example-text-tools",
+      "entryPoint": {
+        "group": "forgelm.components.v1",
+        "name": "normalize"
+      },
+      "runtimeGroup": "default",
+      "nodes": [
+        "nodes/normalize.json"
+      ]
+    }
+  ],
+  "executionRequirements": {
+    "network": false,
+    "gpu": false,
+    "secrets": [],
+    "externalWrites": []
+  }
+}

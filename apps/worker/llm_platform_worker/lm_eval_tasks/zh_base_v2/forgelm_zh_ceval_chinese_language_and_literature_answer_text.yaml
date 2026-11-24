@@ -1,0 +1,3 @@
+task: forgelm_zh_ceval_chinese_language_and_literature_answer_text
+dataset_name: chinese_language_and_literature
+include: _ceval_answer_text.yaml

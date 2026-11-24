@@ -1,0 +1,54 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Node.js
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+
+# Build and cache output
+dist/
+build/
+.cache/
+.tmp/
+*.log
+
+# Local platform state
+.llm-platform/
+data/
+
+# Private models, generated assets and local experiment payloads
+/models/
+/outputs/
+/.tmp_*.json
+
+# Isolated public-release candidates (not production platform state)
+/.release-work/
+
+# External model implementations and private workflows
+/model_sources/
+/examples/plugin-suites/microlm/
+/configs/workflows/
+/scripts/experiments/
+*.whl
+*.flsuite

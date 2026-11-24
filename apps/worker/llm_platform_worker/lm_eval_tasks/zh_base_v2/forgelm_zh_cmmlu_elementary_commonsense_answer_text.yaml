@@ -1,0 +1,3 @@
+task: forgelm_zh_cmmlu_elementary_commonsense_answer_text
+dataset_name: elementary_commonsense
+include: _cmmlu_answer_text.yaml

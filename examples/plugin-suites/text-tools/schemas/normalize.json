@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lowercase": {
+      "type": "boolean",
+      "default": false,
+      "title": "转换为小写"
+    }
+  }
+}

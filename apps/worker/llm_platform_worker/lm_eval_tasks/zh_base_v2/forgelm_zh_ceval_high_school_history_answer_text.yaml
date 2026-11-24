@@ -1,0 +1,3 @@
+task: forgelm_zh_ceval_high_school_history_answer_text
+dataset_name: high_school_history
+include: _ceval_answer_text.yaml

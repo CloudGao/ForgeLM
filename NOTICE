@@ -1,0 +1,7 @@
+ForgeLM
+Copyright 2026 ForgeLM contributors
+
+ForgeLM platform source is licensed under the Apache License, Version 2.0.
+Third-party dependencies retain their own licenses. Model implementations,
+weights, training data and private experiment artifacts are not distributed
+with this platform source release.

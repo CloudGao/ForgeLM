@@ -1,0 +1,18 @@
+task: forgelm_zh_chid_cloze
+dataset_path: clue/clue
+dataset_name: chid
+validation_split: validation
+output_type: multiple_choice
+process_docs: !function utils.process_chid
+doc_to_text: !function utils.cloze_prompt
+doc_to_choice: !function utils.cloze_choices
+doc_to_target: !function utils.cloze_target
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

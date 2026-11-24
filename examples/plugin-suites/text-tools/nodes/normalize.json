@@ -1,0 +1,41 @@
+{
+  "schema": "forgelm.node-spec.v1",
+  "id": "example.text-tools.normalize",
+  "displayName": "文本标准化",
+  "capability": "transform",
+  "component": "normalize",
+  "execution": {
+    "kind": "task",
+    "protocol": "forgelm.plugin.v1"
+  },
+  "inputs": [
+    {
+      "name": "source",
+      "type": "artifact",
+      "format": "text/plain",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "artifact",
+      "format": "text/plain",
+      "required": true
+    }
+  ],
+  "configSchema": "schemas/normalize.json",
+  "resources": {
+    "cpu": 1,
+    "memoryMiB": 256,
+    "gpu": 0
+  },
+  "controls": {
+    "cancel": true,
+    "checkpoint": false,
+    "resume": false
+  },
+  "cache": {
+    "eligible": false
+  }
+}

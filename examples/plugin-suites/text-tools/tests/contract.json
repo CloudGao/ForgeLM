@@ -1,0 +1,11 @@
+[
+  {
+    "node_id": "example.text-tools.normalize",
+    "config": {
+      "lowercase": true
+    },
+    "inputs": {
+      "source": "source.txt"
+    }
+  }
+]

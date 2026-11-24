@@ -1,0 +1,3 @@
+task: forgelm_zh_cmmlu_chinese_history_answer_text
+dataset_name: chinese_history
+include: _cmmlu_answer_text.yaml

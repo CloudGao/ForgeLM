@@ -1,0 +1,22 @@
+[Unit]
+Description=ForgeLM WSL Data Worker Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=@@WORKER_USER@@
+Environment=HOME=@@WORKER_HOME@@
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WorkingDirectory=@@REPO_ROOT@@
+EnvironmentFile=@@ENV_FILE@@
+ExecStart=@@VENV_PYTHON@@ -m llm_platform_worker.main
+Restart=always
+RestartSec=3
+TimeoutStopSec=30
+CPUQuota=400%
+MemoryHigh=8G
+IOWeight=50
+
+[Install]
+WantedBy=multi-user.target

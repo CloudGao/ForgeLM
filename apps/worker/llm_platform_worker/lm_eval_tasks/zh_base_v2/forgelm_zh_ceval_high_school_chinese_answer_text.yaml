@@ -1,0 +1,3 @@
+task: forgelm_zh_ceval_high_school_chinese_answer_text
+dataset_name: high_school_chinese
+include: _ceval_answer_text.yaml

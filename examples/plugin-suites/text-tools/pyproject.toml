@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "example-text-tools"
+version = "1.0.0"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = ["forgelm-plugin-sdk>=1.0.0,<1.2.0"]
+[project.entry-points."forgelm.components.v1"]
+normalize = "example_text_tools.normalize:NormalizePlugin"
+[tool.setuptools.packages.find]
+where = ["src"]

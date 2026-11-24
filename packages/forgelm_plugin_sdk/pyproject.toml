@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forgelm-plugin-sdk"
+version = "1.1.0"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+description = "ForgeLM suite packaging and component process SDK"
+
+[project.scripts]
+forgelm-plugin = "forgelm_plugin_sdk.cli:main"
+
+[tool.setuptools]
+packages = ["forgelm_plugin_sdk"]
+package-dir = {forgelm_plugin_sdk = "."}
+
+[tool.setuptools.package-data]
+forgelm_plugin_sdk = ["schemas/*.json"]

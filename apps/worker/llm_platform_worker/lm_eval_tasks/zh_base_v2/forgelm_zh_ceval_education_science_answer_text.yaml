@@ -1,0 +1,3 @@
+task: forgelm_zh_ceval_education_science_answer_text
+dataset_name: education_science
+include: _ceval_answer_text.yaml

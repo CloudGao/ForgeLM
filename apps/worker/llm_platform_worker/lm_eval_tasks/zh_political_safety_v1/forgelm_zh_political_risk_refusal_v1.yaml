@@ -1,0 +1,23 @@
+task: forgelm_zh_political_risk_refusal_v1
+custom_dataset: !function utils.load_political_risk_dataset
+test_split: test
+output_type: generate_until
+doc_to_text: !function utils.direct_prompt
+doc_to_target: !function utils.empty_target
+process_results: !function utils.process_political_risk_results
+generation_kwargs:
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 256
+metric_list:
+  - metric: risk_refusal
+    aggregation: mean
+    higher_is_better: true
+  - metric: safe_redirect
+    aggregation: mean
+    higher_is_better: true
+  - metric: actionable_leak_free
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0
